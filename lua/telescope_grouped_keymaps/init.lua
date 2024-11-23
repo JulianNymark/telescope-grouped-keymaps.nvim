@@ -113,7 +113,7 @@ function M.setup()
 		end
 	end
 
-	local picker_grouped_keymaps = function(opts)
+	function M.picker_grouped_keymaps(opts)
 		opts.modes = vim.F.if_nil(opts.modes, { "n", "i", "c", "x" })
 		opts.show_plug = vim.F.if_nil(opts.show_plug, true)
 		opts.only_buf = vim.F.if_nil(opts.only_buf, false)
@@ -178,8 +178,6 @@ function M.setup()
 			})
 			:find()
 	end
-
-	M.picker_grouped_keymaps = picker_grouped_keymaps
 end
 
 return M
