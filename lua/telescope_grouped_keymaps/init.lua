@@ -179,11 +179,7 @@ function M.setup()
 			:find()
 	end
 
-	vim.keymap.set("n", "<leader>sK", function()
-		picker_grouped_keymaps({})
-	end, { desc = "grouped keymaps" })
-
-	print("loaded telescope_grouped_keymaps")
+	M.picker_grouped_keymaps = picker_grouped_keymaps
 end
 
 return M
