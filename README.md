@@ -1,4 +1,4 @@
-# telescope_grouped_keymaps
+# telescope-grouped-keymaps
 
 The missing newbie friendly plugin "bridge"?
 
@@ -49,14 +49,14 @@ Using [Lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
 {
-    "JulianNymark/telescope_grouped_keymaps.nvim",
+    "JulianNymark/telescope-grouped-keymaps.nvim",
     dependencies = {
       "nvim-telescope/telescope.nvim",
       "folke/which-key.nvim",
     },
     event = "VeryLazy",
     config = function()
-      local module = require("telescope_grouped_keymaps")
+      local module = require("telescope-grouped-keymaps")
       module.setup({})
 
       vim.keymap.set("n", "<leader>sK", function()
