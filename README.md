@@ -49,19 +49,21 @@ Using [Lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
 {
-    "JulianNymark/telescope-grouped-keymaps.nvim",
+   "JulianNymark/telescope-grouped-keymaps.nvim",
     dependencies = {
       "nvim-telescope/telescope.nvim",
       "folke/which-key.nvim",
     },
     event = "VeryLazy",
-    config = function()
-      local module = require("telescope-grouped-keymaps")
-      module.setup({})
-
-      vim.keymap.set("n", "<leader>sK", function()
-        module.picker_grouped_keymaps({})
-      end, { desc = "list grouped keymaps" })
-    end,
+    opts = {},
+    keys = {
+      {
+        "<leader>sK",
+        function()
+          require("telescope-grouped-keymaps").picker_grouped_keymaps({})
+        end,
+        desc = "search grouped keymaps"
+      }
+    },
   }
 ```
